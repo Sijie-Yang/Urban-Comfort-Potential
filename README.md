@@ -46,6 +46,14 @@
 - [x] Update the first version of data and code for this project.
 - [ ] Update a second version of data and code with more details.
 
+## Abstract
+
+Urban comfort shapes how people inhabit cities and can be assessed through modelling of environmental and social conditions. Beyond these observable states lies urban comfort potential—the latent scope for improving comfort across activities and places—which remains largely invisible without systematic analysis. 
+
+We examine Singapore as a global city, analysing **44,228 geotagged image–text posts** to classify five activity types and link them to spatial features using surveys and causal inference. A hybrid urban comfort index achieves strong validation (**R² > 0.8** across all activity categories) and, combined with **Ising Monte Carlo optimisation**, enables targeted simulations of improvement strategies.
+
+**Keywords:** human-centred GeoAI, urban optimisation, urban planning, social media, geospatial modelling
+
 ## Key Features
 
 ### 🏙️ Urban Comfort Index (UCI) Analysis
@@ -57,24 +65,24 @@
   - Urban Sightseeing
 
 ### 📊 Comprehensive Data Integration
-- **Spatial Perception (SP)**: Environmental comfort factors including temperature, humidity, wind, greenery, and shading
-- **Functional Convenience (FC)**: Ratings and density analysis for various urban amenities
-- **Accessibility (AC)**: Transportation and connectivity metrics
-- **Context Density (CD)**: Population and building density analysis
-- **Social Activity (SA)**: Activity-specific comfort measurements
+- **Streetscape Perception (SP)**: Environmental comfort factors including greenery, shading, imageability, and human scale
+- **Functional Convenience (FC)**: Point-of-interest ratings, density analysis, and user reviews
+- **Accessibility (AC)**: Transportation connectivity and transit access metrics
+- **Context Density (CD)**: Population, building, and leisure space density analysis
 
-### 🎯 Predictive Urban Comfort Index (pUCI)
-- **5 Strategic Policies**:
+### 🎯 Policy-weighted Urban Comfort Index (pUCI)
+- **5 Strategic Planning Scenarios**:
   - pUCI_1: Balanced Development
-  - pUCI_2: Eco-Livable
-  - pUCI_3: Community Cohesion
-  - pUCI_4: Active Walkability
-  - pUCI_5: Tourism Strategy
+  - pUCI_2: Eco-Livable City Initiative  
+  - pUCI_3: Community Cohesion Drive
+  - pUCI_4: Active Walkability Focus
+  - pUCI_5: Tourism Strategy Development
 
-### 🔧 Advanced Optimization
-- **Ising Model Optimization**: Advanced algorithms for spatial optimization across 9 key urban features
-- **Geospatial Analytics**: Over 675 optimization result files with comprehensive spatial analysis
-- **Interactive Visualization**: Multi-level mapping and heatmap analysis
+### 🔧 Advanced Optimization Framework
+- **Ising Monte Carlo Optimization**: Systematic spatial optimization with simulated annealing
+- **Causal Inference**: Identifying activity-specific spatial drivers using causal forest models
+- **Socio-spatial Variation Analysis**: Understanding policy-sensitive vs location-sensitive features
+- **Geospatial Modelling**: HGWR-based UCI construction with hybrid weighting approach
 
 ## Data Structure
 
@@ -115,10 +123,11 @@ jupyter notebook RunMe.ipynb
 
 ### Main Analysis Pipeline
 
-1. **Load UCI Data**: Import comprehensive urban comfort index dataset
-2. **Visualize UCI Patterns**: Generate 5-level classification maps for each social activity
-3. **Optimization Analysis**: Load and analyze 45 policy-feature combinations
-4. **Results Visualization**: Create comprehensive heatmaps and statistical summaries
+1. **Social Media Data Processing**: Load and classify 44,228 geotagged image-text posts into 5 activity categories
+2. **UCI Construction**: Build hybrid urban comfort indices using geospatial modelling (HGWR) and survey weighting
+3. **Policy Scenario Analysis**: Generate 5 policy-weighted UCIs representing different planning strategies
+4. **Optimization Simulation**: Apply Ising Monte Carlo optimization across 9 spatial features
+5. **Socio-spatial Variation**: Analyze policy-sensitive vs location-sensitive feature patterns
 
 ## Contributing
 
