@@ -88,10 +88,10 @@ We examine Singapore as a global city, analysing **44,228 geotagged image–text
 
 ```
 Data/
-├── Data_UCI_pUCI.gpkg          # Main UCI and pUCI dataset
+├── Data_UCI_pUCI.gpkg          # Main UCI and pUCI dataset (58+ spatial features)
 └── Optimisation_Result/        # 675 optimization result files
-    ├── *.gpkg (630 files)      # Geospatial optimization results
-    └── *.csv (45 files)        # Statistical summaries
+    ├── ising_optimisation_UCP_*.gpkg (630 files)    # Spatial optimization results
+    ├── UCP_ising_energy_evolution_*.csv (45 files) # Energy evolution tracking
 ```
 
 ## Getting Started
@@ -104,13 +104,14 @@ Data/
   - `matplotlib` - Data visualization
   - `pandas` - Data analysis
   - `numpy` - Numerical computing
+  - `tqdm` - Progress bars for data loading
 
 ### Installation
 
 ```bash
 git clone https://github.com/Sijie-Yang/Urban-Comfort-Potential.git
 cd Urban-Comfort-Potential
-pip install geopandas matplotlib pandas numpy
+pip install geopandas matplotlib pandas numpy tqdm
 ```
 
 ## Usage
@@ -121,13 +122,34 @@ Run the main analysis notebook:
 jupyter notebook RunMe.ipynb
 ```
 
-### Main Analysis Pipeline
+**Note**: Each main section (marked with ## headers) in the notebook can be run independently. You can execute any section without needing to run the previous sections first.
 
-1. **Social Media Data Processing**: Load and classify 44,228 geotagged image-text posts into 5 activity categories
-2. **UCI Construction**: Build hybrid urban comfort indices using geospatial modelling (HGWR) and survey weighting
-3. **Policy Scenario Analysis**: Generate 5 policy-weighted UCIs representing different planning strategies
-4. **Optimization Simulation**: Apply Ising Monte Carlo optimization across 9 spatial features
-5. **Socio-spatial Variation**: Analyze policy-sensitive vs location-sensitive feature patterns
+### Analysis Workflow
+
+The notebook is organized into two main analytical components:
+
+#### 🏙️ **UCI Assessment Result Analytics**
+1. **Import UCI Data**: Load comprehensive urban comfort index dataset with 58+ spatial features
+2. **Visualize UCI Patterns**: Generate 5-level classification maps for each social activity:
+   - Eating & Drinking
+   - Nature Exploration  
+   - Community Gathering
+   - Walking & Exercising
+   - Urban Sightseeing
+
+#### 🎯 **UCP Optimisation Result Analytics**
+1. **Create UCP Geodataframe**: Initialize spatial framework for optimization analysis
+2. **Load Feature-Policy Pairs**: Import 45 optimization result files (5 policies × 9 features)
+3. **Policy-specific UCP Analysis**: Examine UCP patterns for each policy scenario:
+   - UCP_1: Balanced Development
+   - UCP_2: Eco-Livable City Initiative
+   - UCP_3: Community Cohesion Drive
+   - UCP_4: Active Walkability Focus
+   - UCP_5: Tourism Strategy Development
+4. **Delta-UCP Analysis**: Calculate specialized UCP differences between policies
+5. **Administrative District Analysis**: Aggregate UCP outcomes at district level
+6. **PCA Analysis**: Perform principal component analysis of Delta-UCP patterns
+7. **District Classification**: Categorize districts based on UCP characteristics
 
 ## Contributing
 
