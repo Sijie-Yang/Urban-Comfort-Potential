@@ -1,4 +1,4 @@
-# <div align="center">Socio-spatial variation of urban comfort potential in a global city</div>
+# <div align="center">Computational Urban Comfort Indexing and Annealed Optimisation for Latent Potentials</div>
 
 <div align="center">
 
