@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.env
+.venv
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Optional: uncomment to ignore large result folders if not tracking them
+# data/optimisation_result_user/
