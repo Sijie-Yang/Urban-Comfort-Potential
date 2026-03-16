@@ -29,12 +29,6 @@
 <a href="https://ual.sg">Urban Analytics Lab</a>
 </div>
 
-
-
-[Urban Analytics Lab](https://ual.sg)
-
-
-
 <br>
 
 <div align="center">
@@ -52,8 +46,8 @@
 
 - [X] Update the first version of data and code for this project.
 - [X] Update a full-detail version of data and code with more details.
-- [] Continue to refine and adjust the framework.
-- [] Extend this framework to 10 global cities.
+- [ ] Continue to refine and adjust the framework.
+- [ ] Extend this framework to 10 global cities.
 
 ## Abstract
 
