@@ -15,3 +15,5 @@ venv/
 
 # Optional: uncomment to ignore large result folders if not tracking them
 # data/optimisation_result_user/
+data/optimisation_result_user_new/
+data/optimisation_result_user_new_*/
