@@ -1,56 +1,56 @@
 activity,model,r2,rmse,note
-eating,OLS_all,0.7042124200580587,3.665514256612089,in-sample; n_features=27
-eating,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.078e-61, RLMerr p=4.641e-66; recommend=SAC_or_SDM"
-eating,Global_SAR,0.9234615776240466,1.8645957888546851,in-sample; selected=False; aic=9020.233; bic=9184.018; loglik=-4481.116; rho=0.9305; lambda=nan
-eating,Global_SEM,0.39207870984230464,5.2549504159933464,in-sample; selected=False; aic=9066.610; bic=9224.748; loglik=-4505.305; rho=nan; lambda=0.9775
-eating,Global_SDM,0.9283025756143972,1.8046655302705077,in-sample; selected=True; aic=8966.363; bic=9282.639; loglik=-4427.182; rho=0.9468; lambda=nan
-eating,Global_SAC,0.9154384329412331,1.959888917804083,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9035; lambda=nan
-eating,GWR_SP,0.9182443538345489,1.9270981017886557,in-sample; bw=33.0; n_features=3
-eating,GWR_FC,0.907848578304836,2.0459544747347778,in-sample; bw=62.0; n_features=15
-eating,GWR_AC,0.9447242789214969,1.5845726450008741,in-sample; bw=37.0; n_features=6
-eating,GWR_CD,0.9373412772465882,1.6870801472361134,in-sample; bw=22.0; n_features=3
-eating,HGWR_Hybrid,0.9523381430291498,1.4713988946456138,in-sample; AC:0.274; CD:0.220; FC:0.302; SP:0.204
-nature,OLS_all,0.2695869991676195,2.890216346605703,in-sample; n_features=27
-nature,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=2.163e-56, RLMerr p=5.784e-18; recommend=SAC_or_SDM"
-nature,Global_SAR,0.8463044304743175,1.325796230598344,in-sample; selected=False; aic=7665.398; bic=7829.184; loglik=-3803.699; rho=0.9684; lambda=nan
-nature,Global_SEM,0.09805033907964011,3.211716888801943,in-sample; selected=False; aic=7709.427; bic=7867.565; loglik=-3826.714; rho=nan; lambda=0.9789
-nature,Global_SDM,0.8508521360800347,1.3060344254452496,in-sample; selected=True; aic=7643.628; bic=7959.904; loglik=-3765.814; rho=0.9629; lambda=nan
-nature,Global_SAC,0.8519365752182388,1.3012777407621423,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.2040; lambda=nan
-nature,GWR_SP,0.8847388981213389,1.1481205468214506,in-sample; bw=24.0; n_features=3
-nature,GWR_FC,0.7287119925564867,1.7614138363960787,in-sample; bw=89.0; n_features=15
-nature,GWR_AC,0.861004354632434,1.2608014592865808,in-sample; bw=41.0; n_features=6
-nature,GWR_CD,0.8808186686329775,1.167482076646109,in-sample; bw=24.0; n_features=3
-nature,HGWR_Hybrid,0.8999306533116069,1.0697853294280615,in-sample; AC:0.205; CD:0.294; FC:0.158; SP:0.343
-community,OLS_all,0.6381774876244153,2.4232477393437075,in-sample; n_features=27
-community,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=2.022e-65, RLMerr p=1.973e-39; recommend=SAC_or_SDM"
-community,Global_SAR,0.902477676914012,1.258061994923753,in-sample; selected=False; aic=7386.654; bic=7550.440; loglik=-3664.327; rho=0.9396; lambda=nan
-community,Global_SEM,0.38084248560441814,3.169936757752208,in-sample; selected=False; aic=7403.841; bic=7561.979; loglik=-3673.920; rho=nan; lambda=0.9776
-community,Global_SDM,0.9073850157061709,1.226000514705761,in-sample; selected=True; aic=7347.221; bic=7663.497; loglik=-3617.611; rho=0.9477; lambda=nan
-community,Global_SAC,0.8921190986872904,1.323190295106225,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9386; lambda=nan
-community,GWR_SP,0.920087960293007,1.1388227431788542,in-sample; bw=22.0; n_features=3
-community,GWR_FC,0.842728131220388,1.5976275736174896,in-sample; bw=72.0; n_features=15
-community,GWR_AC,0.9086953979154999,1.2172964566493423,in-sample; bw=39.0; n_features=6
-community,GWR_CD,0.9212144351368455,1.1307675849981367,in-sample; bw=22.0; n_features=3
-community,HGWR_Hybrid,0.928689419108468,1.0757887810707438,in-sample; AC:0.263; CD:0.281; FC:0.270; SP:0.186
-walking,OLS_all,0.515021479651566,2.7375306863971116,in-sample; n_features=27
-walking,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=2.024e-65, RLMerr p=1.706e-14; recommend=SAC_or_SDM"
-walking,Global_SAR,0.8666904189678644,1.4352528759641718,in-sample; selected=False; aic=7941.121; bic=8104.907; loglik=-3941.561; rho=0.9408; lambda=nan
-walking,Global_SEM,0.3646005267916138,3.1334384568294227,in-sample; selected=False; aic=7966.572; bic=8124.710; loglik=-3955.286; rho=nan; lambda=0.9681
-walking,Global_SDM,0.8724707457182715,1.4037916477154142,in-sample; selected=True; aic=7894.108; bic=8210.384; loglik=-3891.054; rho=0.9362; lambda=nan
-walking,Global_SAC,0.86887577395653,1.423440154630364,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.0218; lambda=nan
-walking,GWR_SP,0.8941718309114619,1.278787508411999,in-sample; bw=24.0; n_features=3
-walking,GWR_FC,0.760843344669856,1.9223788492874219,in-sample; bw=103.0; n_features=15
-walking,GWR_AC,0.8770917925268956,1.378123652320858,in-sample; bw=41.0; n_features=6
-walking,GWR_CD,0.8979297947280102,1.2558773794664226,in-sample; bw=22.0; n_features=3
-walking,HGWR_Hybrid,0.9026905211904258,1.2262395441016536,in-sample; AC:0.235; CD:0.207; FC:0.193; SP:0.364
-sightseeing,OLS_all,0.35467227670980617,3.3945804113234246,in-sample; n_features=27
-sightseeing,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.288e-54, RLMerr p=4.441e-15; recommend=SAC_or_SDM"
-sightseeing,Global_SAR,0.8569586633578834,1.5981837819429296,in-sample; selected=False; aic=8421.894; bic=8585.680; loglik=-4181.947; rho=0.9564; lambda=nan
-sightseeing,Global_SEM,0.24277261084180146,3.677130951640034,in-sample; selected=False; aic=8423.830; bic=8581.968; loglik=-4183.915; rho=nan; lambda=0.9706
-sightseeing,Global_SDM,0.8615609167816164,1.5722633705699256,in-sample; selected=True; aic=8410.212; bic=8726.488; loglik=-4149.106; rho=0.9577; lambda=nan
-sightseeing,Global_SAC,0.8509968550389458,1.6311490851557104,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9380; lambda=nan
-sightseeing,GWR_SP,0.8845523604217929,1.435781880578435,in-sample; bw=22.0; n_features=3
-sightseeing,GWR_FC,0.7757927178330892,2.0008788632018226,in-sample; bw=70.0; n_features=15
-sightseeing,GWR_AC,0.8424044187923436,1.6775209686925618,in-sample; bw=46.0; n_features=6
-sightseeing,GWR_CD,0.8922503881189646,1.3870873038384883,in-sample; bw=22.0; n_features=3
-sightseeing,HGWR_Hybrid,0.890775619431034,1.3965475735342805,in-sample; AC:0.250; CD:0.230; FC:0.203; SP:0.316
+eating,OLS_all,0.7016876855733352,2.254830003623703,in-sample; n_features=27
+eating,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=4.293e-60, RLMerr p=4.318e-66; recommend=SAC_or_SDM"
+eating,Global_SAR,0.9233336964420639,1.1430901343131163,in-sample; selected=False; aic=6973.197; bic=7136.983; loglik=-3457.599; rho=0.9329; lambda=nan
+eating,Global_SEM,0.38927838915021684,3.22626367483449,in-sample; selected=False; aic=7018.888; bic=7177.026; loglik=-3481.444; rho=nan; lambda=0.9779
+eating,Global_SDM,0.9280764563631134,1.1071685802191533,in-sample; selected=True; aic=6921.291; bic=7237.567; loglik=-3404.645; rho=0.9484; lambda=nan
+eating,Global_SAC,0.9152683112950151,1.201714067942652,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9103; lambda=nan
+eating,GWR_SP,0.9180436104505961,1.181869767179115,in-sample; bw=33.0; n_features=3
+eating,GWR_FC,0.9228384060882454,1.1467765652072504,in-sample; bw=53.0; n_features=15
+eating,GWR_AC,0.9446815298048797,0.970986730770617,in-sample; bw=37.0; n_features=6
+eating,GWR_CD,0.9374295643267305,1.0326729561443837,in-sample; bw=22.0; n_features=3
+eating,HGWR_Hybrid,0.9553361490329054,0.872481640941037,in-sample; AC:0.275; CD:0.212; FC:0.306; SP:0.208
+nature,OLS_all,0.26623322726629284,1.762700243924069,in-sample; n_features=27
+nature,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=3.217e-56, RLMerr p=8.371e-17; recommend=SAC_or_SDM"
+nature,Global_SAR,0.8406426406225539,0.8214582698390538,in-sample; selected=False; aic=5655.393; bic=5819.179; loglik=-2798.697; rho=0.9670; lambda=nan
+nature,Global_SEM,0.09626421869827295,1.9562312059894815,in-sample; selected=False; aic=5700.759; bic=5858.897; loglik=-2822.380; rho=nan; lambda=0.9776
+nature,Global_SDM,0.8451755108599331,0.8096909247914376,in-sample; selected=True; aic=5634.795; bic=5951.071; loglik=-2761.397; rho=0.9608; lambda=nan
+nature,Global_SAC,0.8467096919957154,0.8056692573756782,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.2205; lambda=nan
+nature,GWR_SP,0.8810441319210979,0.7097287188032599,in-sample; bw=24.0; n_features=3
+nature,GWR_FC,0.7218530091489301,1.0852670730024023,in-sample; bw=89.0; n_features=15
+nature,GWR_AC,0.85931911751565,0.7718217018473299,in-sample; bw=41.0; n_features=6
+nature,GWR_CD,0.8779091621616485,0.7190200166961955,in-sample; bw=24.0; n_features=3
+nature,HGWR_Hybrid,0.8972897867424114,0.6594870307236125,in-sample; AC:0.207; CD:0.275; FC:0.159; SP:0.359
+community,OLS_all,0.629523309146995,1.4963934264626193,in-sample; n_features=27
+community,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=6.024e-63, RLMerr p=9.698e-39; recommend=SAC_or_SDM"
+community,Global_SAR,0.9014534406573997,0.7717667789772792,in-sample; selected=False; aic=5344.924; bic=5508.710; loglik=-2643.462; rho=0.9433; lambda=nan
+community,Global_SEM,0.3695613581858527,1.9520312215719058,in-sample; selected=False; aic=5367.495; bic=5525.633; loglik=-2655.747; rho=nan; lambda=0.9781
+community,Global_SDM,0.9059831069567018,0.7538211092323517,in-sample; selected=True; aic=5312.707; bic=5628.984; loglik=-2600.354; rho=0.9499; lambda=nan
+community,Global_SAC,0.8925834002555992,0.8057513608286493,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9549; lambda=nan
+community,GWR_SP,0.9194212796787842,0.6978716085360468,in-sample; bw=22.0; n_features=3
+community,GWR_FC,0.8415151644820157,0.9787216696159866,in-sample; bw=72.0; n_features=15
+community,GWR_AC,0.9076751685227638,0.7470068926743584,in-sample; bw=39.0; n_features=6
+community,GWR_CD,0.9192118303229299,0.6987780134586772,in-sample; bw=22.0; n_features=3
+community,HGWR_Hybrid,0.9273553882533695,0.6626238306037099,in-sample; AC:0.249; CD:0.297; FC:0.276; SP:0.177
+walking,OLS_all,0.510722353020282,1.6800479759437597,in-sample; n_features=27
+walking,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.144e-66, RLMerr p=6.497e-14; recommend=SAC_or_SDM"
+walking,Global_SAR,0.8679526848086819,0.8727880350229984,in-sample; selected=False; aic=5859.932; bic=6023.718; loglik=-2900.966; rho=0.9430; lambda=nan
+walking,Global_SEM,0.3592007945746014,1.922671011710435,in-sample; selected=False; aic=5890.246; bic=6048.384; loglik=-2917.123; rho=nan; lambda=0.9691
+walking,Global_SDM,0.8736152386928734,0.8538692080485879,in-sample; selected=True; aic=5812.282; bic=6128.558; loglik=-2850.141; rho=0.9375; lambda=nan
+walking,Global_SAC,0.8707145617338564,0.863612266238555,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.0364; lambda=nan
+walking,GWR_SP,0.8951862790065257,0.7775942952176994,in-sample; bw=24.0; n_features=3
+walking,GWR_FC,0.7644745777498975,1.1656358384337613,in-sample; bw=103.0; n_features=15
+walking,GWR_AC,0.879119627073319,0.8350680961805935,in-sample; bw=41.0; n_features=6
+walking,GWR_CD,0.8992669561111859,0.7623071177890296,in-sample; bw=22.0; n_features=3
+walking,HGWR_Hybrid,0.9047198870539845,0.7413872753283308,in-sample; AC:0.215; CD:0.227; FC:0.192; SP:0.367
+sightseeing,OLS_all,0.3523206205917092,2.0633156247933067,in-sample; n_features=27
+sightseeing,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.601e-56, RLMerr p=1.33e-14; recommend=SAC_or_SDM"
+sightseeing,Global_SAR,0.8568469612704992,0.9700316786982014,in-sample; selected=False; aic=6327.654; bic=6491.440; loglik=-3134.827; rho=0.9558; lambda=nan
+sightseeing,Global_SEM,0.24444165359452308,2.228535904480551,in-sample; selected=False; aic=6330.568; bic=6488.706; loglik=-3137.284; rho=nan; lambda=0.9701
+sightseeing,Global_SDM,0.8616296791516214,0.9536897297568824,in-sample; selected=True; aic=6313.257; bic=6629.533; loglik=-3100.629; rho=0.9571; lambda=nan
+sightseeing,Global_SAC,0.8513942460922573,0.9883333366484649,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9394; lambda=nan
+sightseeing,GWR_SP,0.8854766473874138,0.8676262006856468,in-sample; bw=22.0; n_features=3
+sightseeing,GWR_FC,0.7795971687207606,1.2036333604642253,in-sample; bw=70.0; n_features=15
+sightseeing,GWR_AC,0.8419156442722582,1.0193658464298383,in-sample; bw=46.0; n_features=6
+sightseeing,GWR_CD,0.893359302779413,0.8372345070418367,in-sample; bw=22.0; n_features=3
+sightseeing,HGWR_Hybrid,0.8922904032782941,0.8414200019371031,in-sample; AC:0.238; CD:0.240; FC:0.202; SP:0.320
