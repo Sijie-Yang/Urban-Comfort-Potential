@@ -1,56 +1,56 @@
 activity,model,r2,rmse,note
-eating,OLS_all,0.7039278698204013,2.2438456138826073,in-sample; n_features=27
-eating,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.335e-60, RLMerr p=4.173e-66; recommend=SAC_or_SDM"
-eating,Global_SAR,0.9236993002511382,1.139091126044723,in-sample; selected=False; aic=6957.553; bic=7121.339; loglik=-3449.777; rho=0.9324; lambda=nan
-eating,Global_SEM,0.3916253575383647,3.216471888872016,in-sample; selected=False; aic=7004.325; bic=7162.463; loglik=-3474.162; rho=nan; lambda=0.9779
-eating,Global_SDM,0.928457655499937,1.1030007106094972,in-sample; selected=True; aic=6904.720; bic=7220.996; loglik=-3396.360; rho=0.9480; lambda=nan
-eating,Global_SAC,0.9156345168692719,1.1977787586935082,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9110; lambda=nan
-eating,GWR_SP,0.9182565169404503,1.179018928665706,in-sample; bw=33.0; n_features=3
-eating,GWR_FC,0.9230121843773085,1.1442085980296903,in-sample; bw=53.0; n_features=15
-eating,GWR_AC,0.944920353431653,0.9678092765351455,in-sample; bw=37.0; n_features=6
-eating,GWR_CD,0.9374752018751338,1.03114646490772,in-sample; bw=22.0; n_features=3
-eating,HGWR_Hybrid,0.9553410368750618,0.8714621432872908,in-sample; AC:0.270; CD:0.209; FC:0.317; SP:0.204
-nature,OLS_all,0.2672787096955861,1.7596160899293005,in-sample; n_features=27
-nature,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.546e-56, RLMerr p=4.551e-17; recommend=SAC_or_SDM"
-nature,Global_SAR,0.8422959382302015,0.8163378976036489,in-sample; selected=False; aic=5629.618; bic=5793.404; loglik=-2785.809; rho=0.9672; lambda=nan
-nature,Global_SEM,0.09794941971369386,1.9523782651552397,in-sample; selected=False; aic=5674.989; bic=5833.127; loglik=-2809.495; rho=nan; lambda=0.9778
-nature,Global_SDM,0.8468773608275203,0.8043928878059692,in-sample; selected=True; aic=5607.889; bic=5924.165; loglik=-2747.944; rho=0.9610; lambda=nan
-nature,Global_SAC,0.8475756037458126,0.8025567667654127,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.2190; lambda=nan
-nature,GWR_SP,0.8822277596249188,0.7054560908193315,in-sample; bw=24.0; n_features=3
-nature,GWR_FC,0.7247395585179918,1.0785006722965995,in-sample; bw=89.0; n_features=15
-nature,GWR_AC,0.8601720346353992,0.7686799235163874,in-sample; bw=41.0; n_features=6
-nature,GWR_CD,0.8791036792396365,0.7147514765405356,in-sample; bw=24.0; n_features=3
-nature,HGWR_Hybrid,0.8986272397055344,0.6544992529473304,in-sample; AC:0.204; CD:0.286; FC:0.158; SP:0.353
-community,OLS_all,0.6314993529705004,1.489092242182909,in-sample; n_features=27
-community,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=2.031e-63, RLMerr p=4.566e-39; recommend=SAC_or_SDM"
-community,Global_SAR,0.9021564073624219,0.7673061323147247,in-sample; selected=False; aic=5320.357; bic=5484.143; loglik=-2631.178; rho=0.9432; lambda=nan
-community,Global_SEM,0.37164886833487354,1.944480868254309,in-sample; selected=False; aic=5342.709; bic=5500.847; loglik=-2643.355; rho=nan; lambda=0.9782
-community,Global_SDM,0.9067083475312228,0.7492450227071152,in-sample; selected=True; aic=5287.041; bic=5603.317; loglik=-2587.520; rho=0.9498; lambda=nan
-community,Global_SAC,0.8934580977058983,0.80068685205436,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9537; lambda=nan
-community,GWR_SP,0.9198922237078312,0.6942882443378068,in-sample; bw=22.0; n_features=3
-community,GWR_FC,0.8423674724672532,0.9739247292844343,in-sample; bw=72.0; n_features=15
-community,GWR_AC,0.908471364845312,0.7421316727988226,in-sample; bw=39.0; n_features=6
-community,GWR_CD,0.9198776501705881,0.6943513953570256,in-sample; bw=22.0; n_features=3
-community,HGWR_Hybrid,0.9282185279146515,0.6572167961753713,in-sample; AC:0.256; CD:0.293; FC:0.271; SP:0.180
-walking,OLS_all,0.5127914270402765,1.672844132200339,in-sample; n_features=27
-walking,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=1.825e-66, RLMerr p=2.47e-14; recommend=SAC_or_SDM"
-walking,Global_SAR,0.868691637467344,0.8684487797957402,in-sample; selected=False; aic=5838.704; bic=6002.490; loglik=-2890.352; rho=0.9428; lambda=nan
-walking,Global_SEM,0.3607213282486088,1.9162100967495925,in-sample; selected=False; aic=5868.479; bic=6026.617; loglik=-2906.239; rho=nan; lambda=0.9691
-walking,Global_SDM,0.87432706081332,0.8496086055924645,in-sample; selected=True; aic=5791.530; bic=6107.806; loglik=-2839.765; rho=0.9376; lambda=nan
-walking,Global_SAC,0.8712596669438628,0.8599146159323615,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=1.0333; lambda=nan
-walking,GWR_SP,0.8956860988822564,0.7740501697711356,in-sample; bw=24.0; n_features=3
-walking,GWR_FC,0.7654305067322366,1.1607368743794386,in-sample; bw=103.0; n_features=15
-walking,GWR_AC,0.8796170279694602,0.8315350254555792,in-sample; bw=41.0; n_features=6
-walking,GWR_CD,0.8998028299686018,0.7586225436188765,in-sample; bw=22.0; n_features=3
-walking,HGWR_Hybrid,0.9050845064653154,0.7383572977087672,in-sample; AC:0.219; CD:0.209; FC:0.190; SP:0.382
-sightseeing,OLS_all,0.3572176034867026,2.0490576945057333,in-sample; n_features=27
-sightseeing,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=6.359e-57, RLMerr p=6.526e-15; recommend=SAC_or_SDM"
-sightseeing,Global_SAR,0.8581537168025095,0.9625674682579108,in-sample; selected=False; aic=6295.054; bic=6458.840; loglik=-3118.527; rho=0.9557; lambda=nan
-sightseeing,Global_SEM,0.24486958595740038,2.2209213591142105,in-sample; selected=False; aic=6299.181; bic=6457.319; loglik=-3121.590; rho=nan; lambda=0.9701
-sightseeing,Global_SDM,0.862782747380012,0.9467309157985997,in-sample; selected=True; aic=6282.136; bic=6598.412; loglik=-3085.068; rho=0.9569; lambda=nan
-sightseeing,Global_SAC,0.853013714043996,0.9798522804986805,in-sample; selected=False; aic=nan; bic=nan; loglik=nan; rho=0.9405; lambda=nan
-sightseeing,GWR_SP,0.8864614056396765,0.8611800415697977,in-sample; bw=22.0; n_features=3
-sightseeing,GWR_FC,0.7809068259372147,1.1962904152533729,in-sample; bw=70.0; n_features=15
-sightseeing,GWR_AC,0.8431805423091663,1.0120970835720253,in-sample; bw=46.0; n_features=6
-sightseeing,GWR_CD,0.8943671289229674,0.8306570235634307,in-sample; bw=22.0; n_features=3
-sightseeing,HGWR_Hybrid,0.892647790629171,0.8373898510134609,in-sample; AC:0.244; CD:0.235; FC:0.206; SP:0.315
+eating,OLS_all,0.7041718074640773,2.251180701051579,in-sample; n_features=27
+eating,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=6.532e-61, RLMerr p=6.04e-66; recommend=SAC_or_SDM"
+eating,Global_SAR,0.9239268846867092,1.1415795433236027,in-sample; selected=False; aic=6967.506; bic=7131.292; loglik=-3454.753; rho=0.9328; lambda=nan
+eating,Global_SEM,,,error: only 0-dimensional arrays can be converted to Python scalars
+eating,Global_SDM,0.9286291439697735,1.1057349318570722,in-sample; selected=True; aic=6915.589; bic=7231.865; loglik=-3401.795; rho=0.9483; lambda=nan
+eating,Global_SAC,,,error: only 0-dimensional arrays can be converted to Python scalars
+eating,GWR_SP,0.9182134333010745,1.1836725212571635,in-sample; bw=33.0; n_features=3
+eating,GWR_FC,0.9230071669635901,1.1484596124427178,in-sample; bw=53.0; n_features=15
+eating,GWR_AC,0.9448372745212446,0.9721055771740086,in-sample; bw=37.0; n_features=6
+eating,GWR_CD,0.9375539320884839,1.0342919045749286,in-sample; bw=22.0; n_features=3
+eating,HGWR_Hybrid,0.9555387772154569,0.8727327595162909,in-sample; AC:0.280; CD:0.210; FC:0.307; SP:0.203
+nature,OLS_all,0.2682445777075966,1.7453944039114966,in-sample; n_features=27
+nature,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=3.953e-57, RLMerr p=5.458e-17; recommend=SAC_or_SDM"
+nature,Global_SAR,0.8426073887465051,0.8094737595314677,in-sample; selected=False; aic=5594.472; bic=5758.258; loglik=-2768.236; rho=0.9673; lambda=nan
+nature,Global_SEM,,,error: only 0-dimensional arrays can be converted to Python scalars
+nature,Global_SDM,0.8472048087916441,0.7975638253839786,in-sample; selected=True; aic=5572.221; bic=5888.497; loglik=-2730.111; rho=0.9611; lambda=nan
+nature,Global_SAC,,,error: only 0-dimensional arrays can be converted to Python scalars
+nature,GWR_SP,0.8825263531339873,0.6993278601434152,in-sample; bw=24.0; n_features=3
+nature,GWR_FC,0.7251779013667715,1.069637032426052,in-sample; bw=89.0; n_features=15
+nature,GWR_AC,0.8601665896926722,0.7629851394318085,in-sample; bw=41.0; n_features=6
+nature,GWR_CD,0.8790988221943217,0.7094566607499616,in-sample; bw=24.0; n_features=3
+nature,HGWR_Hybrid,0.8985770428400868,0.6497985517657098,in-sample; AC:0.199; CD:0.286; FC:0.159; SP:0.355
+community,OLS_all,0.6297543903275054,1.5020951013276973,in-sample; n_features=27
+community,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=4.423e-63, RLMerr p=9.072e-39; recommend=SAC_or_SDM"
+community,Global_SAR,0.9011204410823015,0.776257360688283,in-sample; selected=False; aic=5368.036; bic=5531.822; loglik=-2655.018; rho=0.9427; lambda=nan
+community,Global_SEM,,,error: only 0-dimensional arrays can be converted to Python scalars
+community,Global_SDM,0.905785459651871,0.7577246886016908,in-sample; selected=True; aic=5333.235; bic=5649.511; loglik=-2610.617; rho=0.9493; lambda=nan
+community,Global_SAC,,,error: only 0-dimensional arrays can be converted to Python scalars
+community,GWR_SP,0.9191010333680546,0.7021403932426425,in-sample; bw=22.0; n_features=3
+community,GWR_FC,0.8418890764920712,0.9815974211724126,in-sample; bw=72.0; n_features=15
+community,GWR_AC,0.908036901076781,0.7486162841780662,in-sample; bw=39.0; n_features=6
+community,GWR_CD,0.9191412016470157,0.7019660568191266,in-sample; bw=22.0; n_features=3
+community,HGWR_Hybrid,0.9286765452716753,0.659278110823582,in-sample; AC:0.261; CD:0.295; FC:0.254; SP:0.190
+walking,OLS_all,0.5103188751763021,1.683589151557018,in-sample; n_features=27
+walking,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=7.203e-67, RLMerr p=1.468e-13; recommend=SAC_or_SDM"
+walking,Global_SAR,0.8666817499594246,0.8784645466716885,in-sample; selected=False; aic=5885.351; bic=6049.137; loglik=-2913.676; rho=0.9420; lambda=nan
+walking,Global_SEM,,,error: only 0-dimensional arrays can be converted to Python scalars
+walking,Global_SDM,0.872276660418625,0.8598339111861879,in-sample; selected=True; aic=5839.158; bic=6155.434; loglik=-2863.579; rho=0.9362; lambda=nan
+walking,Global_SAC,,,error: only 0-dimensional arrays can be converted to Python scalars
+walking,GWR_SP,0.8946550105555088,0.7808837378086033,in-sample; bw=24.0; n_features=3
+walking,GWR_FC,0.7624768833213267,1.1725527193857428,in-sample; bw=103.0; n_features=15
+walking,GWR_AC,0.8778339437497138,0.8409200621524182,in-sample; bw=41.0; n_features=6
+walking,GWR_CD,0.8988793255544617,0.7650669042532404,in-sample; bw=22.0; n_features=3
+walking,HGWR_Hybrid,0.9031373602168328,0.7487857777372273,in-sample; AC:0.212; CD:0.214; FC:0.200; SP:0.374
+sightseeing,OLS_all,0.35787767031349194,2.0591310491047254,in-sample; n_features=27
+sightseeing,LM_Diagnostics,,,"KNN(k=8); LMlag p=0, LMerr p=0, RLMlag p=9.528e-57, RLMerr p=7.466e-15; recommend=SAC_or_SDM"
+sightseeing,Global_SAR,0.8581193661706509,0.9679137533103445,in-sample; selected=False; aic=6318.420; bic=6482.206; loglik=-3130.210; rho=0.9557; lambda=nan
+sightseeing,Global_SEM,,,error: only 0-dimensional arrays can be converted to Python scalars
+sightseeing,Global_SDM,0.8627783006158213,0.9518894152950131,in-sample; selected=True; aic=6305.172; bic=6621.448; loglik=-3096.586; rho=0.9571; lambda=nan
+sightseeing,Global_SAC,,,error: only 0-dimensional arrays can be converted to Python scalars
+sightseeing,GWR_SP,0.8859878819416483,0.8676620604823593,in-sample; bw=22.0; n_features=3
+sightseeing,GWR_FC,0.7810844808552831,1.2023014642929113,in-sample; bw=70.0; n_features=15
+sightseeing,GWR_AC,0.8432255245286351,1.0174493042060424,in-sample; bw=46.0; n_features=6
+sightseeing,GWR_CD,0.8942389973695537,0.8356759054461966,in-sample; bw=22.0; n_features=3
+sightseeing,HGWR_Hybrid,0.8925572757102256,0.8422938054750713,in-sample; AC:0.238; CD:0.236; FC:0.208; SP:0.318
