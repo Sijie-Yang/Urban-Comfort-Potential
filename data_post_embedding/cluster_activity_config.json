@@ -1,0 +1,13 @@
+{
+  "drop_clusters": [],
+  "cluster_to_activity": {
+    "0": "eating",
+    "3": "nature",
+    "1": "community",
+    "5": "community",
+    "6": "eating",
+    "2": "walking",
+    "7": "sightseeing"
+  },
+  "_comment": "Copy to cluster_activity_config.json and edit. Keys are KMeans cluster ids (strings). Values are one of: eating, nature, community, walking, sightseeing. Omit clusters you do not want to count; list their ids in drop_clusters instead."
+}

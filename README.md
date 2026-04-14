@@ -152,6 +152,46 @@ data_post_embedding/
 
 Other tensors in this folder (e.g. gated SigLIP2, gate λ, image path lists) follow the same naming pattern; see `code_0_social_media_post_embedding.ipynb` for the complete inventory.
 
+**Large `*features.npy` files** (SigLIP2 / ResNet / ViT / sentence-transformer caption vectors) are **not stored in this GitHub repo** — they are published on **Hugging Face** to avoid oversized clones. After cloning GitHub, download them with the script below ([Hugging Face](#hugging-face-post-embedding-features)).
+
+### Hugging Face (post embedding features)
+
+| Item | Purpose |
+|------|---------|
+| `scripts/download_post_embedding_features.py` | Pulls every `*features.npy` from a HF **dataset** repo into `data_post_embedding/` |
+| `scripts/upload_post_embedding_features.py` | Maintainer: uploads local `data_post_embedding/*features.npy` to a HF dataset repo |
+
+Default dataset id (override with env **`HF_POST_EMBEDDING_REPO`**): `Sijie-Yang/urban-comfort-potential-post-embedding-features` — **create this repo on Hugging Face** under your account before the first upload, or pass `--create-repo` once.
+
+**Download (users & reproducibility)**
+
+```bash
+pip install -U huggingface_hub
+huggingface-cli login          # optional for public datasets; required if the dataset is private
+
+export HF_POST_EMBEDDING_REPO=Sijie-Yang/urban-comfort-potential-post-embedding-features
+python scripts/download_post_embedding_features.py
+```
+
+**Upload (maintainers — after `*features.npy` exist locally)**
+
+1. [Create a dataset](https://huggingface.co/new-dataset) (e.g. `urban-comfort-potential-post-embedding-features`) or run upload with `--create-repo`.
+2. Log in: `huggingface-cli login` (token with **write** on that namespace).
+3. Run:
+
+```bash
+export HF_POST_EMBEDDING_REPO=YOUR_USERNAME/urban-comfort-potential-post-embedding-features
+python scripts/upload_post_embedding_features.py --create-repo   # omit --create-repo if the repo already exists
+```
+
+This uploads each file whose name ends with `features.npy` (flat layout at the dataset root). For manual uploads, use the [Hugging Face web UI](https://huggingface.co/docs/hub/datasets-upload-guide) **Add file** or:
+
+```bash
+huggingface-cli upload YOUR_USERNAME/urban-comfort-potential-post-embedding-features \
+  data_post_embedding/dataset_post_resnet_features.npy --repo-type dataset
+# repeat per file, or use the Python script above
+```
+
 ## Getting Started
 
 ### Prerequisites
