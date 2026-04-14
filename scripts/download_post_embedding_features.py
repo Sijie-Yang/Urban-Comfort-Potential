@@ -17,7 +17,8 @@ import os
 from pathlib import Path
 
 REPO_ENV = "HF_POST_EMBEDDING_REPO"
-DEFAULT_REPO = "Sijie-Yang/urban-comfort-potential-post-embedding-features"
+# Primary dataset (browser): https://huggingface.co/datasets/sijiey/Urban-Comfort-Potential
+DEFAULT_REPO = "sijiey/Urban-Comfort-Potential"
 
 
 def list_feature_npys(repo_id: str, token: str | bool | None) -> list[str]:

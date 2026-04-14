@@ -20,7 +20,7 @@ import os
 from pathlib import Path
 
 REPO_ENV = "HF_POST_EMBEDDING_REPO"
-DEFAULT_REPO = "Sijie-Yang/urban-comfort-potential-post-embedding-features"
+DEFAULT_REPO = "sijiey/Urban-Comfort-Potential"
 
 
 def iter_feature_files(root: Path) -> list[Path]:
