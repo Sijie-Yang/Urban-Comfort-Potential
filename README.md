@@ -41,13 +41,15 @@
 
 - **2025-09-22**: Release of first version of project data and code.
 - **2026-03-16**: Added full details of project implementation.
+- **2026-04-14**: Updated the whole workflow, especially release post embedding data, and new optimisation process.
 
 ## Todo
 
 - [X] Update the first version of data and code for this project.
 - [X] Update a full-detail version of data and code with more details.
-- [ ] Continue to refine and adjust the framework.
-- [ ] Extend this framework to 10 global cities.
+- [X] Continue to refine and adjust the framework.
+- [ ] Extend this framework to first 10 global cities.
+- [ ] Extend this framework to more global cities.
 
 ## Abstract
 
@@ -95,6 +97,7 @@ We examine Singapore as a global city, analysing **44,228 geotagged image–text
 
 | Notebook | Description | Main inputs | Main outputs |
 |----------|-------------|-------------|--------------|
+| **code_0** | Social media post embedding analytics | Precomputed post-level features in `data_post_embedding/` (see below) | Clustering & validation metrics, caption-based comfort scores, `data_post_embedding/data_social_activity.gpkg` with `social_activity_comfort_*`, `caption_analytics_results.csv` |
 | **code_1** | Social Activity Data | Raw social media / activity data | Activity counts, Moran's I, LISA maps |
 | **code_2** | Geospatial Data | — | `data_geospatial.gpkg` (SP, FC, AC, CD features) |
 | **code_3** | Social Activity Field (UCI Part 1) | `data_social_activity.gpkg`, `data_geospatial.gpkg` | `data_uci_modelling.gpkg` (features + field targets) |
@@ -105,6 +108,10 @@ We examine Singapore as a global city, analysing **44,228 geotagged image–text
 | **code_8** | Result Analytics | `data_uci_puci.gpkg`, `data/optimisation_result/` | UCI/pUCI visualisation, delta-UCP, socio-spatial variation, PCA, district classification |
 
 ## Data Structure
+
+### `data/`
+
+Main UCI / pUCI pipeline assets (paths relative to repository root).
 
 ```
 data/
@@ -124,30 +131,50 @@ data/
 └── optimisation_result_user/               # Optional user output folder (code_7)
 ```
 
+### `data_post_embedding/`
+
+Post-level multimodal embeddings and caption comfort for **44,228** aligned posts (code_0). Paths relative to repository root.
+
+```
+data_post_embedding/
+├── dataset_post_embedding_grid_id.npy      # Post rows ↔ grid `id`
+├── grid_point_coordinates.csv              # Grid point coordinates / ids for mapping
+├── embedding_index_grid_cluster.csv        # Cluster labels per post (+ grid linkage)
+├── cluster_activity_config.json            # Cluster → activity label mapping
+├── dataset_post_*_features.npy             # Image embeddings: SigLIP2, ResNet, ViT (ablation & clustering)
+├── dataset_post_st_caption_features.npy    # Sentence-transformer caption vectors (comfort §4)
+├── dataset_post_caption_has_text.npy       # Text-present mask for captions
+├── dataset_post_comfort_*.npy             # Comfort: anchor sims, raw / normalised scores
+├── dataset_post_caption_activity.npy       # Per-post activity from cluster + config
+├── data_social_activity.gpkg               # Activity intensity GPKG; §5 adds social_activity_comfort_*
+└── caption_analytics_results.csv           # Aggregated caption / comfort analytics
+```
+
+Other tensors in this folder (e.g. gated SigLIP2, gate λ, image path lists) follow the same naming pattern; see `code_0_social_media_post_embedding.ipynb` for the complete inventory.
+
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- Jupyter (for running notebooks)
+- **Python 3.10–3.11** recommended (matches `requirements.txt`; avoids common conflicts with older stacks)
+- **Jupyter** — included in `requirements.txt` (`jupyter`, `ipykernel`); or open `.ipynb` in VS Code / Cursor with the same interpreter
 
-Key packages (install as needed per notebook):
-
-- `geopandas`, `pandas`, `numpy` — data and geospatial
-- `matplotlib` — visualisation
-- `scikit-learn` — models, scaling, metrics
-- `statsmodels` — HGWR, VIF (code_6)
-- `econml` — Causal Forest (code_4)
-- `libpysal`, `esda` — spatial weights and Moran’s I (code_1)
-- `tqdm` — progress bars
+Dependencies for **code_0–code_8** are pinned in **`requirements.txt`** (geospatial, ML, causal inference, sentence-transformers, Qiskit, etc.). Use a fresh virtual environment or conda env when possible.
 
 ### Installation
 
 ```bash
 git clone https://github.com/Sijie-Yang/Urban-Comfort-Potential.git
 cd Urban-Comfort-Potential
-pip install geopandas pandas numpy matplotlib scikit-learn statsmodels econml libpysal esda tqdm
+
+python -m venv .venv          # optional but recommended
+source .venv/bin/activate     # Windows: .venv\Scripts\activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
+
+If you only need a subset of notebooks, you can still start from `requirements.txt` and remove unused sections after reading the file comments, or install packages manually—but the full list is the supported reference.
 
 ## Usage
 
@@ -155,6 +182,7 @@ pip install geopandas pandas numpy matplotlib scikit-learn statsmodels econml li
 
 Notebooks can be run in sequence to reproduce the full pipeline, or run individually if the required data files already exist:
 
+0. **code_0** *(optional, embedding & comfort branch)* — Post-level embedding ablation, clustering, caption comfort, merge into `data_post_embedding/data_social_activity.gpkg`  
 1. **code_1** — Social activity data and spatial autocorrelation  
 2. **code_2** — Geospatial feature preparation → `data/data_geospatial.gpkg`  
 3. **code_3** — Social activity field + merge → `data/data_uci_modelling.gpkg`  
@@ -165,7 +193,9 @@ Notebooks can be run in sequence to reproduce the full pipeline, or run individu
 8. **code_8** — Result analytics (UCI/pUCI maps, optimisation summaries, socio-spatial variation, delta-UCP, PCA, district classification)
 
 ```bash
-jupyter notebook code_1_social_activity_data.ipynb   # start from data
+jupyter notebook code_0_social_media_post_embedding.ipynb   # post embeddings & caption comfort (optional branch)
+# or
+jupyter notebook code_1_social_activity_data.ipynb   # start from core pipeline
 # or
 jupyter notebook code_8_result_analytics.ipynb        # run analytics if data already exist
 ```
@@ -174,6 +204,7 @@ jupyter notebook code_8_result_analytics.ipynb        # run analytics if data al
 
 ### What each notebook does
 
+- **code_0**: Loads precomputed post embeddings (image + caption), compares representation backbones, runs clustering linked to grid ids, derives caption-based comfort scores (sentence-transformer anchors), and can write comfort-enriched fields back to `data_post_embedding/data_social_activity.gpkg` for mapping.
 - **code_1–code_3**: Build activity and geospatial inputs and the unified modelling dataset (`data_uci_modelling.gpkg`).
 - **code_4**: Causal forest on activity-field targets; output used with code_5 for hybrid weights.
 - **code_5**: Survey processing and expert weights; combined with causal weights in code_6.
@@ -202,5 +233,5 @@ Under the following terms:
 
 ## Contact
 
-- Author: Sijie Yang
+- Author: Sijie Yang (sijiey@u.nus.edu)
 - GitHub: [@Sijie-Yang](https://github.com/Sijie-Yang)
