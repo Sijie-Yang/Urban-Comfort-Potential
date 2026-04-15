@@ -13,6 +13,7 @@ venv/
 
 # Jupyter
 .ipynb_checkpoints/
+.jupyter_lab_token
 
 # Optional: uncomment to ignore large result folders if not tracking them
 # data/optimisation_result_user/
@@ -20,3 +21,8 @@ data/archive/
 
 # Post-level feature matrices (host on Hugging Face; see README "Hugging Face")
 data_post_embedding/*features.npy
+
+scripts/
+
+# Large multi-run optimisation outputs (local only; aggregate folder may stay smaller)
+data/optimisation_result_*/
