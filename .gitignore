@@ -26,3 +26,5 @@ scripts/
 
 # Large multi-run optimisation outputs (local only; aggregate folder may stay smaller)
 data/optimisation_result_*/
+
+paper/
