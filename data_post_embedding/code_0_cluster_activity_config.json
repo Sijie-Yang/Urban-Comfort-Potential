@@ -1,0 +1,12 @@
+{
+  "drop_clusters": [1, 4],
+  "cluster_to_activity": {
+    "0": "eating",
+    "3": "nature",
+    "5": "community",
+    "6": "eating",
+    "2": "walking",
+    "7": "sightseeing"
+  },
+  "_comment": "Author-assigned mapping from KMeans cluster ids (string keys) to the five urban activity types. After inspecting representative posts per cluster (sample images and t-SNE layout), the authors labelled clusters that reflect meaningful urban social activities. Clusters in drop_clusters were excluded for different reasons: cluster 1 is a cross-cutting residual partition whose posts overlap multiple activity-specific clusters in t-SNE and could not be reliably assigned to a single activity category (withheld to avoid misallocating activity support); cluster 4 predominantly contains text-dominant promotional or informational graphics lacking interpretable urban-activity imagery."
+}

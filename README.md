@@ -138,9 +138,9 @@ Post-level multimodal embeddings and caption comfort for **44,228** aligned post
 ```
 data_post_embedding/
 ├── dataset_post_embedding_grid_id.npy      # Post rows ↔ grid `id`
-├── grid_point_coordinates.csv              # Grid point coordinates / ids for mapping
-├── embedding_index_grid_cluster.csv        # Cluster labels per post (+ grid linkage)
-├── cluster_activity_config.json            # Cluster → activity label mapping
+├── data_grid_point_coordinates.csv         # Grid point coordinates / ids for mapping
+├── code_0_embedding_index_grid_cluster.csv # Cluster labels per post (+ grid linkage)
+├── code_0_cluster_activity_config.json     # Author-assigned cluster → activity label mapping
 ├── dataset_post_*_features.npy             # Image embeddings: SigLIP2, ResNet, ViT (ablation & clustering)
 ├── dataset_post_st_caption_features.npy    # Sentence-transformer caption vectors (comfort §4)
 ├── dataset_post_caption_has_text.npy       # Text-present mask for captions
